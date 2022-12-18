@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-family: "Poppins", "Open Sans", serif;
+  font-size: 62.5%;
+}
+
+a,a:active {
+  text-decoration: none;
+  color: blue;
+}
+
+body {
+  background-color: coral;
+  height: 100vh;
+}
+
+.title{
+  font-size: 4rem;
+  color: white;
+  font-weight: bold;
+}
+
+.form {
+  height: inherit;
+  display: flex;
+  row-gap: 10px;
+  max-width: max-content;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0px auto;
+}
+
+.search {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border-radius: 50px;
+  padding: 10px 50px;
+  text-align: center;
+  font-size: 2rem;
+  background-color: white;
+  width: max-content;
+}
+
+.query_text {
+  font-size: 2rem;
+  background-color: #ffffff !important;
+  padding: 10px 30px;
+  border-radius: 50px;
+}
+
+.copy-text{
+cursor: pointer;
+display: flex;
+  align-items: center;
+  gap: 4px;
+padding: 10px 20px;
+}
+
+.copy-text--icon{
+  height: 3rem;
+  width: 3rem;
+  color: blue;
+}
+
+.submit-button:hover {
+  background-color: white;
+}
+
+.output{
+  cursor: not-allowed;
+}
+
+textarea {
+  width: 100%;
+  height: 300px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 2rem;
+}
