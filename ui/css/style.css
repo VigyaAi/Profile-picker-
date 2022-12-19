@@ -74,8 +74,16 @@ padding: 10px 20px;
   background-color: white;
 }
 
-.output{
-  cursor: not-allowed;
+
+
+.output-score{
+  font-size: 3rem;
+  color: white;
+}
+.output-link{
+  font-size: 2rem;
+  color: blue;
+  text-decoration: underline;
 }
 
 textarea {
