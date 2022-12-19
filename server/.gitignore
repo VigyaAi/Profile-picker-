@@ -1,3 +1,0 @@
-# Ignoing the csv and pdf files from being removed by git
-*.csv
-*.pdf
