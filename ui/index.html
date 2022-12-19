@@ -24,15 +24,17 @@
   </head>
   <body>
     <div class="form">
-      <h1 class="title">Resume Picker</h1>
+      <h1 class="title">Profile Picker</h1>
       <div class="search">
-        <input
+        <!-- <input
           class="query_text"
           id="input-query"
           name="input-query"
-          placeholder="Ask us Anything"
+          placeholder="Fill Job Description"
           type="text"
-        />
+        /> -->
+        <textarea class="query_text" name="text" rows="1" cols="65" wrap="soft" style="resize: none; overflow: hidden;" onkeypress="auto_grow(this);" onkeyup="auto_grow(this);"></textarea>
+
         <button class="btn submit-button" onclick="sendRequest()">
           Submit
         </button>
