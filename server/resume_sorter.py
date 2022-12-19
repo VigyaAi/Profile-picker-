@@ -10,7 +10,11 @@ from datasets import load_dataset
 import umap
 import altair as alt
 from sklearn.metrics.pairwise import cosine_similarity
+from pdf2image import convert_from_path
 from annoy import AnnoyIndex
+
+from cvt_pdf_to_img import get_pdf_first_img
+
 import warnings
 warnings.filterwarnings('ignore')
 pd.set_option('display.max_colwidth', None)
@@ -76,13 +80,21 @@ def sort_resume(job_disc):
 
 
     sel_pdf_paths = list(df.iloc[results.index+1, :].pdf_path)
+    sel_pdf_ids = list(df.iloc[results.index+1, :].id)
     score_list = list(results.distance)
 
     # names_list = [i.split(" ")[0] for i in df.iloc[results.index+1, :].text]
     # names_list
 
+    ##############################################################
+    # Capturing image of the first page of the pdf
+    images_path = get_pdf_first_img(sel_pdf_paths, sel_pdf_ids)
 
-    res_dict = {i:j for i, j in zip(sel_pdf_paths, score_list)}
+
+    # res_df = pd.DataFrame({"pdf_path":sel_pdf_paths, "image_path":images_path, "distance":score_list})
+    # res_df.to_json("gen_data.json")
+
+    res_dict = [{"pdf_path":i, "image_path":j, "distance":k} for i, j, k in zip(sel_pdf_paths, images_path, score_list)]
 
 
     out_file = open("gen_data.json", "w")
@@ -93,7 +105,7 @@ def sort_resume(job_disc):
 
 
 if __name__ == "__main__":
-    dataToSendBack = sort_resume(sys.argv[0])
+    dataToSendBack = sort_resume(sys.argv[1])
     
     print("gen_data.json")
     sys.stdout.flush()
