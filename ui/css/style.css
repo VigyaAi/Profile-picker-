@@ -1,96 +1,88 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  outline: none;
-  border: none;
-  font-family: "Poppins", "Open Sans", serif;
-  font-size: 62.5%;
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+
+
+.heading {
+  text-align: center;
+  margin-bottom: 2%;
+  font-family: "Bree Serif";
 }
 
-a,a:active {
-  text-decoration: none;
-  color: blue;
-}
-
-body {
-  background-color: coral;
+.footer_section {
+  background-color: #08aeea;
+  background-image: linear-gradient(0deg, #08aeea 0%, #2af598 100%);
   height: 100vh;
-}
-
-.title{
-  font-size: 4rem;
-  color: white;
-  font-weight: bold;
-}
-
-.form {
-  height: inherit;
+  padding-top: 2%;
   display: flex;
-  row-gap: 10px;
-  max-width: max-content;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
-  margin: 0px auto;
 }
 
-.search {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+.email_text {
+  width: 65%;
+  font-size: 18px;
+  color: #363636;
+  background-color: #ffffff;
+  border: 0px;
+  padding: 2px 20px 10px 30px;
+  height: auto;
+  border-radius: 40px;
 }
 
-.btn {
-  border-radius: 50px;
-  padding: 10px 50px;
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #aa076b 0%,
+    #61045f 51%,
+    #aa076b 100%
+  );
+  margin: 10px;
+  padding: 10px 45px;
   text-align: center;
-  font-size: 2rem;
-  background-color: white;
-  width: max-content;
-}
-
-.query_text {
-  font-size: 2rem;
-  background-color: #ffffff !important;
-  padding: 10px 30px;
-  border-radius: 50px;
-}
-
-.copy-text{
-cursor: pointer;
-display: flex;
-  align-items: center;
-  gap: 4px;
-padding: 10px 20px;
-}
-
-.copy-text--icon{
-  height: 3rem;
-  width: 3rem;
-  color: blue;
-}
-
-.submit-button:hover {
-  background-color: white;
-}
-
-
-
-.output-score{
-  font-size: 3rem;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
   color: white;
-}
-.output-link{
-  font-size: 2rem;
-  color: blue;
-  text-decoration: underline;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
 }
 
-textarea {
-  width: 100%;
-  height: 300px;
-  padding: 12px 20px;
-  border-radius: 4px;
-  background-color: #f8f8f8;
-  font-size: 2rem;
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-grad a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.tableDesign {
+  
+  max-width: 60vw;
+  margin-top: 2%;
+  background-color: #85FFBD;
+  background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+  backdrop-filter: blur(80px);
+
+}
+
+.tagsInput{
+    width: 40%;
+}
+.tableHeadDesign{
+  
+   background-color: #1efb95;
+  background-image: linear-gradient(45deg, #1efb95 0%, #FFFB7D 100%); 
+}
+
+.output-link:hover{
+
+  text-decoration: underline;
+  color:blue;
+  cursor: pointer;
+  transition-delay: 150ms;
 }

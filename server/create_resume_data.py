@@ -7,7 +7,7 @@ import os
 import PyPDF2
 import pandas as pd
 
-data_path = r"data\pdf_data"
+data_path = r"data"
 
 #####################
 #Initializing the cols
