@@ -31,7 +31,8 @@ body {
   row-gap: 10px;
   max-width: max-content;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  padding: 5rem 2rem;
   margin: 0px auto;
 }
 
