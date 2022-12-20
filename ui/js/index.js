@@ -31,11 +31,11 @@ async function sendRequest() {
   // remove output message
   document.getElementsByClassName("initial_content")[0]?.remove();
 
-  const data = await response(description);
-  data.map((item, index) => {
-    outputSelector.insertAdjacentHTML(
-      "beforeend",
-      `<a class="card"
+  response(description).then((data) =>
+    data.map((item, index) => {
+      outputSelector.insertAdjacentHTML(
+        "beforeend",
+        `<a class="card"
         target="_blank" href="../server/${item.pdf_path}">
         <img
           alt="resume image"
@@ -45,8 +45,9 @@ async function sendRequest() {
           src="../server/${item.image_path}"
         />
       </a>`
-    );
-  });
+      );
+    })
+  );
 }
 
 function auto_grow(element) {
