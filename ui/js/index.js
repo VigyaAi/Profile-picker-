@@ -37,12 +37,15 @@ const sendRequest = () => {
   ];
 
   response.map((item, index) => {
-
-    const outputSelector = document.getElementById("output");
+    const outputSelector = document.getElementsByClassName("output")[0];
     outputSelector.insertAdjacentHTML(
       "beforeend",
       `<th class="output-serialNum">${item.serialNum}</th><th class="output-link">${item.link}</th><th class="output-score">${item.score}</th>`
     );
-    console.log(item);
   });
 };
+
+function auto_grow(element){
+  element.style.height= "5px";
+  element.style.height = (element.scrollHeight)+ "px";
+}

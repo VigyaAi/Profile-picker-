@@ -1,2 +1,3 @@
-# Profile-picker-
-The project is based on semantic search to propose the idea in Semantic Search AI Hackathon on LabLab.ai
+# Profile Picker
+* The project is based on semantic search for "Semantic Search AI Hackathon on LabLab.ai"
+* We can not disclose our project's idea before the end of the Hackathon.
