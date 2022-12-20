@@ -1,0 +1,8 @@
+tqdm
+cohere
+annoy
+pandas
+numpy
+umap-learn
+altair
+opencv-python
