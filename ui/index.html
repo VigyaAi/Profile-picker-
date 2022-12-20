@@ -30,7 +30,7 @@
     />
   </head>
   <body>
-    <div class="form">
+    <form class="form" onsubmit="sendRequest()">
       <h1 class="title">Profile Picker</h1>
       <div class="search">
         <textarea
@@ -43,11 +43,12 @@
           rows="1"
         ></textarea>
 
-        <button class="btn submit-button" onclick="sendRequest()"  type="button">
-          Submit
-        </button>
+      <button class="btn submit-button"  type="submit">
+        Submit
+      </button>
+
       </div>
-    </div>
+    </form>
 
     <div class="container">
       <!-- Trigger the modal with a button -->
