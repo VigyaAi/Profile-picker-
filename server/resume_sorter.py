@@ -107,6 +107,8 @@ def sort_resume(job_disc):
 
 
 if __name__ == "__main__":
+
+    ##run this file in node.js and get the output of the json file
     dataToSendBack = sort_resume(sys.argv[1])
     
     print("gen_data.json")
