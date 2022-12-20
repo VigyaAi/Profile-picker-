@@ -1,105 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <!-- mobile metas -->
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="initial-scale=1, maximum-scale=1" name="viewport" />
-    <!-- site metas -->
-    <title>Profile Picker</title>
-    <meta content="Profile checker, Resume filter" name="keywords" />
-    <meta content="" name="description" />
-    <meta content="VigyaAi" name="author" />
 
-    <link
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<head>
+  <meta charset="utf-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <!-- mobile metas -->
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="initial-scale=1, maximum-scale=1" name="viewport" />
+  <!-- site metas -->
+  <title>Profile Picker</title>
+  <meta content="Profile checker, Resume filter" name="keywords" />
+  <meta content="" name="description" />
+  <meta content="VigyaAi" name="author" />
 
-    <!-- style css -->
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!-- fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+  <!-- style css -->
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
     <form class="form" onsubmit="sendRequest()">
       <h1 class="title">Profile Picker</h1>
       <div class="search">
-        <textarea
-          class="query_text"
-          cols="55"
-          name="text"
-          onkeypress="auto_grow(this);"
-          onkeyup="auto_grow(this);"
-          placeholder="Fill Job Description"
-          rows="1"
-        ></textarea>
+        <textarea class="query_text" cols="55" name="text" onkeypress="auto_grow(this);" onkeyup="auto_grow(this);"
+          placeholder="Fill Job Description" rows="1"></textarea>
 
-      <button class="btn submit-button"  type="submit">
-        Submit
-      </button>
+        <button class="btn submit-button" type="submit">
+          Submit
+        </button>
 
       </div>
     </form>
-
-    <div class="container">
-      <!-- Trigger the modal with a button -->
-      <button
-        class="btn btn-info btn-lg"
-        data-target="#myModal"
-        data-toggle="modal"
-        type="button"
-      >
-        View Resume
-      </button>
-      <!-- Modal -->
-      <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog modal-lg">
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <button class="close" data-dismiss="modal" type="button">
-                &times;
-              </button>
-              <h4 class="modal-title">Client Resume</h4>
-            </div>
-            <div class="modal-body">
-              <embed
-                frameborder="0"
-                height="400px"
-                src="RESUME.pdf"
-                width="100%"
-              />
-
-              <div class="modal-footer">
-                <button
-                  class="btn btn-default"
-                  data-dismiss="modal"
-                  type="button"
-                >
-                  Close
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <div class="output">
       <div class="initial_content">Your Output will render here</div>
     </div>
 
-    <!-- Javascript files-->
+    <div class="loader"></div>
 
-    <script src="js/index.js"></script>
-  </body>
+  <!-- Javascript files-->
+
+  <script src="js/index.js">
+
+  </script>
+
+</body>
+
 </html>

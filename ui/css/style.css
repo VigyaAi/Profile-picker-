@@ -24,6 +24,7 @@ body {
   /* background-color: coral; */
   background-color: #21d4fd;
   background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+  background-repeat: no-repeat;
 
   /* background-color: #FAD961;
 background-image: linear-gradient(0deg, #FAD961 0%, #F76B1C 100%); */
@@ -116,8 +117,8 @@ background-image: linear-gradient(0deg, #FAD961 0%, #F76B1C 100%); */
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.22),
     0px 1px 3px 1px rgba(0, 0, 0, 0.22);
   overflow: hidden;
-  height: 250px;
-  width: 300px;
+  /* height: 150px;
+  width: 170px; */
   transition: all 1s;
 }
 
@@ -131,4 +132,44 @@ background-image: linear-gradient(0deg, #FAD961 0%, #F76B1C 100%); */
 
 .submit-button:hover {
   background-color: white;
+}
+
+.loader {
+  width: 64px;
+    height: 64px;
+    background-color: rgba(137, 200, 227, 0.5);
+    transform: rotate(45deg);
+    overflow: hidden;
+    /* position: relative; */
+  position: absolute;
+  z-index: 2;
+  top: 60%;
+  left: 45%;
+  display: none;
+}
+
+.loader:after{
+  content: '';
+  position: absolute;
+  inset: 8px;
+  margin: auto;
+  background: #f0f0f0;
+}
+
+.loader:before{
+  content: '';
+  position: absolute;
+  inset: -15px;
+  margin: auto;
+  background: #027ae4;
+  animation: diamondLoader 2s linear infinite;
+}
+
+@keyframes diamondLoader {
+  0%  ,10% {
+    transform: translate(-64px , -64px) rotate(-45deg)
+  }
+  90% , 100% {
+    transform: translate(0px , 0px) rotate(-45deg)
+  }
 }

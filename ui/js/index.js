@@ -9,6 +9,11 @@ async function sendRequest() {
 
   // 1) call api
 
+  const loaderDiv = document.getElementsByClassName('loader')[0];
+  loaderDiv.style.display = 'inline-block';
+  const mainDiv = document.getElementsByTagName('BODY')[0];
+  mainDiv.style.backgroundColor = 'blue';
+
   const API_URL = "http://127.0.0.1:5000/query";
 
   // 2) take response
@@ -19,6 +24,7 @@ async function sendRequest() {
     //   .then((response) => response.json())
     //   .then((data) => console.log(data));
 
+    loaderDiv.style.display = 'none';
 
     // 3) parse response
     const data = response.json();
