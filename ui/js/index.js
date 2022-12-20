@@ -15,9 +15,14 @@ async function sendRequest() {
   const response = async (description) => {
     const response = await fetch(`${API_URL}?description=${description}`);
 
+    // fetch('http://example.com/movies.json')
+    //   .then((response) => response.json())
+    //   .then((data) => console.log(data));
+
+
     // 3) parse response
-    // const data = await response.json();
-    return response;
+    const data = response.json();
+    return data;
   };
 
   //   4) update ui
@@ -31,7 +36,8 @@ async function sendRequest() {
   // remove output message
   document.getElementsByClassName("initial_content")[0]?.remove();
 
-  response(description).then((data) =>
+  response(description).then((data) => {
+
     data.map((item, index) => {
       outputSelector.insertAdjacentHTML(
         "beforeend",
@@ -47,6 +53,7 @@ async function sendRequest() {
       </a>`
       );
     })
+  }
   );
 }
 

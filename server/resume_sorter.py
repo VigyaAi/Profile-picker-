@@ -94,7 +94,13 @@ def sort_resume(job_disc):
     # res_df = pd.DataFrame({"pdf_path":sel_pdf_paths, "image_path":images_path, "distance":score_list})
     # res_df.to_json("gen_data.json")
 
+    # res_dict = [{"pdf_path":i, "image_path":j, "distance":k} for i, j, k in zip(sel_pdf_paths, images_path, score_list)]
+
     res_dict = [{"pdf_path":i, "image_path":j, "distance":k} for i, j, k in zip(sel_pdf_paths, images_path, score_list)]
+
+    # temp_res = [[i, j, k] for i, j, k in zip(sel_pdf_paths, images_path, score_list)]
+
+    # res_dict = {i:temp_res[i] for i in range(len(temp_res))}
 
 
     out_file = open("gen_data.json", "w")
