@@ -4,7 +4,7 @@ from resume_sorter import *
 
 app = Flask(__name__)
 
-@app.route('/query-ex')
+@app.route('/query')
 def hello_world():
     discription = request.args.get('discription')
     return sort_resume(discription)
