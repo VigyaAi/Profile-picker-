@@ -8,7 +8,9 @@ const sendRequest = async () => {
 
   // 1) call api
 
-  const API_URL = "http://127.0.0.1:5000/query";
+    
+
+    const API_URL = "http://127.0.0.1:5000/query";
 
   // 2) take response
   const response = async (description) => {
@@ -21,8 +23,11 @@ const sendRequest = async () => {
 
   //   4) update ui
 
-  const description = document.getElementsByClassName("query_text")[0].value;
-  const outputSelector = document.getElementsByClassName("output")[0];
+  // const description = document.getElementsByClassName("query_text")[0].value;
+    const formDetails = document.getElementsByClassName("query_text")[0];
+    const description = formDetails.value;
+
+   const outputSelector = document.getElementsByClassName("output")[0];
 
   // remove output message
   document.getElementsByClassName("initial_content")[0]?.remove();
