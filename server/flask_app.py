@@ -16,8 +16,5 @@ def hello_world():
 
     return jsonify(sort_res)
     
-
-
-
 if __name__ == '__main__':
    app.run(port=5000)
