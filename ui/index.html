@@ -2,8 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <!-- mobile metas -->
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="initial-scale=1, maximum-scale=1" name="viewport" />
@@ -29,12 +27,8 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
-
-      <!-- <div id="preloader">
-
-      </div> -->
-
     <form class="form" onsubmit="sendRequest()">
       <h1 class="title">Profile Picker</h1>
       <div class="search">
@@ -48,60 +42,14 @@
           rows="1"
         ></textarea>
 
-      <button class="btn submit-button"  type="submit">
-        Submit
-      </button>
-
+        <button class="submit-button" type="submit">
+          <span class="submit-button-span">Submit</span>
+          <div class="loader"></div>
+        </button>
       </div>
     </form>
 
-    <div class="container">
-      <!-- Trigger the modal with a button -->
-      <button
-        class="btn btn-info btn-lg"
-        data-target="#myModal"
-        data-toggle="modal"
-        type="button"
-      >
-        View Resume
-      </button>
-      <!-- Modal -->
-      <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog modal-lg">
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <button class="close" data-dismiss="modal" type="button">
-                &times;
-              </button>
-              <h4 class="modal-title">Client Resume</h4>
-            </div>
-            <div class="modal-body">
-              <embed
-                frameborder="0"
-                height="400px"
-                src="RESUME.pdf"
-                width="100%"
-              />
-
-              <div class="modal-footer">
-                <button
-                  class="btn btn-default"
-                  data-dismiss="modal"
-                  type="button"
-                >
-                  Close
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="output">
-      <div class="initial_content">Your Output will render here</div>
-    </div>
+    <div class="output"></div>
 
     <!-- Javascript files-->
 
