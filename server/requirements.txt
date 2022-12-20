@@ -7,3 +7,4 @@ umap-learn
 altair
 opencv-python
 pdf2image
+flask

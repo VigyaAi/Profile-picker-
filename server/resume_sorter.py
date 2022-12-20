@@ -102,6 +102,8 @@ def sort_resume(job_disc):
 
     # print(res_dict)
 
+    return res_dict
+
 
 
 if __name__ == "__main__":
