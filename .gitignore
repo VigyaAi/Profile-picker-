@@ -1,1 +1,4 @@
 # Ignoing the csv and pdf files from being removed by git
+.vscode
+.idea
+.ipynb_checkpoints
