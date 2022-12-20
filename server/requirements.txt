@@ -9,3 +9,4 @@ opencv-python
 pdf2image
 flask
 flask_cors
+datasets

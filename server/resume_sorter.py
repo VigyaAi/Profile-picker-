@@ -6,7 +6,6 @@ import numpy as np
 import re
 import pandas as pd
 from tqdm import tqdm
-from datasets import load_dataset
 import umap
 import altair as alt
 from sklearn.metrics.pairwise import cosine_similarity
