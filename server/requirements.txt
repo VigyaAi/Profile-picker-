@@ -6,3 +6,4 @@ numpy
 umap-learn
 altair
 opencv-python
+pdf2image
