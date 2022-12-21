@@ -1,4 +1,4 @@
-async function sendRequest() {
+function sendRequest() {
   event.preventDefault();
   /** TODO
    *  1) call api ✅
@@ -9,10 +9,11 @@ async function sendRequest() {
 
   // 1) call api
 
-  const buttonSpan = document.getElementsByClassName("submit-button-span")[0];
-  buttonSpan.style.display = "none";
-  const loaderDiv = document.getElementsByClassName("loader")[0];
-  loaderDiv.style.display = "inline-block";
+  const submitButton = document.getElementsByClassName("submit-button")[0];
+  submitButton.style.display = "none";
+  const loaderButton = document.getElementsByClassName("loader")[0];
+  loaderButton.style.display = "flex";
+
 
   const mainBody = document.getElementsByTagName("body")[0];
 
@@ -40,6 +41,9 @@ async function sendRequest() {
   const outputSelector = document.getElementsByClassName("output")[0];
 
   response(description).then((data) => {
+     submitButton.style.display = "inline-block";
+     loaderButton.style.display = "none";
+
     data.map((item, index) => {
       outputSelector.insertAdjacentHTML(
         "beforeend",
@@ -61,46 +65,3 @@ async function sendRequest() {
 function auto_grow(element) {
   element.style.height = element.scrollHeight + "px";
 }
-
-const sendRequest = () => {
-  /** TODO
-   *  1) run python code
-   *  2) take response
-   *  3) parse response
-   *  4) update ui ✅
-   */
-
-  //   4) update ui
-
-  const response = [
-    {
-      score: 10,
-      link: "example.pdf",
-    },
-    {
-      score: 10,
-      link: "example.pdf",
-    },
-    {
-      score: 10,
-      link: "example.pdf",
-    },
-    {
-      score: 10,
-      link: "example.pdf",
-    },
-    {
-      score: 10,
-      link: "example.pdf",
-    },
-  ];
-
-  response.map((item, index) => {
-    // <h1>${item.score}</h1><p>${item.link}</p>
-    const outputSelector = document.getElementsByClassName("output")[0];
-    outputSelector.insertAdjacentHTML(
-      "afterbegin",
-      `<h1 class="output-score">${item.score}</h1><p class="output-link">${item.link}</p>`
-    );
-  });
-};
