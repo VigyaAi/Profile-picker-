@@ -1,57 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- mobile metas -->
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="initial-scale=1, maximum-scale=1" name="viewport" />
+    <!-- site metas -->
+    <title>Profile Picker</title>
+    <meta content="Profile checker, Resume filter" name="keywords" />
+    <meta content="" name="description" />
+    <meta content="VigyaAi" name="author" />
 
-<head>
-  <meta charset="utf-8" />
-  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <!-- mobile metas -->
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <meta content="initial-scale=1, maximum-scale=1" name="viewport" />
-  <!-- site metas -->
-  <title>Profile Picker</title>
-  <meta content="Profile checker, Resume filter" name="keywords" />
-  <meta content="" name="description" />
-  <meta content="VigyaAi" name="author" />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- style css -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
 
-  <!-- style css -->
-  <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap"
-    rel="stylesheet" />
-</head>
-
-<body>
+  <body>
     <form class="form" onsubmit="sendRequest()">
       <h1 class="title">Profile Picker</h1>
       <div class="search">
-        <textarea class="query_text" cols="55" name="text" onkeypress="auto_grow(this);" onkeyup="auto_grow(this);"
-          placeholder="Fill Job Description" rows="1"></textarea>
+        <textarea
+          class="query_text"
+          cols="65"
+          name="text"
+          onkeypress="auto_grow(this);"
+          onkeyup="auto_grow(this);"
+          placeholder="Fill Job Description"
+          rows="1"
+        ></textarea>
 
-        <button class="btn submit-button" type="submit">
-          Submit
+        <button class="submit-button" type="submit">
+          <span class="submit-button-span">Submit</span>
+          <div class="loader"></div>
         </button>
-
       </div>
     </form>
 
-    <div class="output">
-      <div class="initial_content">Your Output will render here</div>
-    </div>
+    <div class="output"></div>
 
-    <div class="loader"></div>
+    <!-- Javascript files-->
 
-  <!-- Javascript files-->
-
-  <script src="js/index.js">
-
-  </script>
-
-</body>
-
+    <script src="js/index.js"></script>
+  </body>
 </html>

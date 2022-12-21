@@ -9,10 +9,12 @@ async function sendRequest() {
 
   // 1) call api
 
-  const loaderDiv = document.getElementsByClassName('loader')[0];
-  loaderDiv.style.display = 'inline-block';
-  const mainDiv = document.getElementsByTagName('BODY')[0];
-  mainDiv.style.backgroundColor = 'blue';
+  const buttonSpan = document.getElementsByClassName("submit-button-span")[0];
+  buttonSpan.style.display = "none";
+  const loaderDiv = document.getElementsByClassName("loader")[0];
+  loaderDiv.style.display = "inline-block";
+
+  const mainBody = document.getElementsByTagName("body")[0];
 
   const API_URL = "http://127.0.0.1:5000/query";
 
@@ -20,11 +22,9 @@ async function sendRequest() {
   const response = async (description) => {
     const response = await fetch(`${API_URL}?description=${description}`);
 
-    // fetch('http://example.com/movies.json')
-    //   .then((response) => response.json())
-    //   .then((data) => console.log(data));
-
-    loaderDiv.style.display = 'none';
+    loaderDiv.style.display = "none";
+    buttonSpan.style.display = "inline-block";
+    mainBody.style.height = "230vh";
 
     // 3) parse response
     const data = response.json();
@@ -39,11 +39,7 @@ async function sendRequest() {
 
   const outputSelector = document.getElementsByClassName("output")[0];
 
-  // remove output message
-  document.getElementsByClassName("initial_content")[0]?.remove();
-
   response(description).then((data) => {
-
     data.map((item, index) => {
       outputSelector.insertAdjacentHTML(
         "beforeend",
@@ -58,9 +54,8 @@ async function sendRequest() {
         />
       </a>`
       );
-    })
-  }
-  );
+    });
+  });
 }
 
 function auto_grow(element) {
