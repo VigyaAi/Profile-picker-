@@ -1,12 +1,6 @@
 function sendRequest() {
   event.preventDefault();
-  /** TODO
-   *  1) call api ✅
-   *  2) take response ✅
-   *  3) parse response ✅
-   *  4) update ui ✅
-   */
-
+  
   // 1) call api
 
   const submitButton = document.getElementsByClassName("submit-button")[0];
@@ -24,7 +18,6 @@ function sendRequest() {
     const response = await fetch(`${API_URL}?description=${description}`);
 
     loaderButton.style.display = "none";
-    // buttonSpan.style.display = "inline-block";
     mainBody.style.height = "230vh";
 
     // 3) parse response
@@ -34,7 +27,6 @@ function sendRequest() {
 
   //   4) update ui
 
-  // const description = document.getElementsByClassName("query_text")[0].value;
   const formDetails = document.getElementsByClassName("query_text")[0];
   const description = formDetails.value;
 
@@ -63,5 +55,6 @@ function sendRequest() {
 }
 
 function auto_grow(element) {
+  element.style.height = 'auto';
   element.style.height = element.scrollHeight + "px";
 }
