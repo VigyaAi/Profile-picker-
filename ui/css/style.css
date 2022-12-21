@@ -81,6 +81,12 @@ body {
   font-size: 2rem;
   overflow: hidden;
   resize: none;
+  opacity: 0.8;
+}
+
+.query_text:hover{
+  opacity: 1;
+  transition-delay: 200ms;
 }
 
 .output {
