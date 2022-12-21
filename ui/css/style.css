@@ -21,9 +21,11 @@ a:active {
 }
 
 body {
-  background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+  background-image: url('../bg1.jpg');
+  /* background-image: linear-gradient(rgba(0.8.51,0.9),rgba(0,8,51,0.9)); */
+  background-size: 100%;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 10vh;
 }
 
 .title {
@@ -42,7 +44,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   padding: 5rem 2rem;
-  margin: 0px auto;
+  margin: 100px auto;
 }
 
 .search {
@@ -137,7 +139,7 @@ body {
 }
 
 .submit-button:hover {
-  background-color: rgb(187, 41, 255);
+  background-color: rgb(98, 101, 252);
   transition-delay: 200ms;
   color: white;
 }
