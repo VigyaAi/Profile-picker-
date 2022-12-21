@@ -23,8 +23,8 @@ function sendRequest() {
   const response = async (description) => {
     const response = await fetch(`${API_URL}?description=${description}`);
 
-    loaderDiv.style.display = "none";
-    buttonSpan.style.display = "inline-block";
+    loaderButton.style.display = "none";
+    // buttonSpan.style.display = "inline-block";
     mainBody.style.height = "230vh";
 
     // 3) parse response
