@@ -20,6 +20,8 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
 
   <body>
@@ -28,14 +30,17 @@
       <div class="search">
         <textarea
           class="query_text"
+          id="convert_text"
           cols="65"
           name="text"
           onkeydown="auto_grow(this);"
           placeholder="Fill Job Description"
           rows="1"
           minlength="10"
+          value=""
         ></textarea>
-
+        
+        
         <!--        Loader -->
         <div class="loader">
           <span class="dots"></span>
@@ -44,8 +49,13 @@
         <!--        Submit Button-->
         <button class="btn submit-button" type="submit">Submit</button>
       </div>
+      
     </form>
     <div class="output"></div>
+
+    <!-- <button style="padding:2%" id="click_to_record">Voice To Text</button> -->
+    <i id="click_to_record" class="fa-solid fa-microphone fa-4x mic"></i>
+
     <img class="companyLogo" src="logo.png" alt="companyLogo" />
     <!-- Javascript files-->
     <script src="js/index.js"></script>

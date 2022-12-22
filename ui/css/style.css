@@ -163,6 +163,24 @@ body {
   border-radius: 50%;
 }
 
+.mic{
+  /* height: 200px;
+  width: 200px; */
+  color: white;
+  position: absolute;
+  /* top: 34.5%;
+  right: 24%; */
+
+  top:270px;
+  right: 365px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition-delay: 200ms;
+}
+
+.mic:hover{
+  opacity: 1;
+}
 
 
 
@@ -191,3 +209,9 @@ body {
 }
 
 /* This is a final Comment */
+
+
+
+
+
+
