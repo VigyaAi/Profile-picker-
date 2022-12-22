@@ -55,6 +55,10 @@ function sendRequest() {
 }
 
 function auto_grow(element) {
+  const submitButton = document.getElementsByClassName("submit-button")[0];
+  if((event && event.keyCode === 13) || event === 0) {
+    submitButton.click();
+  }
   element.style.height = 'auto';
   element.style.height = element.scrollHeight + "px";
 }

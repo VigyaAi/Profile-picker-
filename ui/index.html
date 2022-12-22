@@ -13,7 +13,7 @@
 
     <!-- style css -->
     <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
 
     <!-- fonts -->
     <link
@@ -23,15 +23,14 @@
   </head>
 
   <body>
-    <form class="form" onsubmit="sendRequest()">
+    <form class="form" id="form1" onsubmit="sendRequest()">
       <h1 class="title">Profile Picker</h1>
       <div class="search">
         <textarea
           class="query_text"
           cols="65"
           name="text"
-          onkeypress="auto_grow(this);"
-          onkeyup="auto_grow(this);"
+          onkeydown="auto_grow(this);"
           placeholder="Fill Job Description"
           rows="1"
           minlength="10"
@@ -46,17 +45,9 @@
         <button class="btn submit-button" type="submit">Submit</button>
       </div>
     </form>
-
     <div class="output"></div>
-
-<!-- <footer class="company">
-    
-</footer> -->
-
-  <img class="companyLogo" src="logo.png" alt="companyLogo">
-
+    <img class="companyLogo" src="logo.png" alt="companyLogo" />
     <!-- Javascript files-->
-
     <script src="js/index.js"></script>
   </body>
 </html>
