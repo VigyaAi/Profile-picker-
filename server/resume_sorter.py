@@ -24,7 +24,7 @@ pd.set_option('display.max_colwidth', None)
 def sort_resume(job_disc):
 
     # Paste your API key here. Remember to not share publicly
-    api_key = '5EHSqcowINTyCK2uCkun3jj68NH6X63Z0z711JHb'
+    api_key = ...
 
     # Create and retrieve a Cohere API key from os.cohere.ai
     co = cohere.Client(api_key)
