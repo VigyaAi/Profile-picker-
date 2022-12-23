@@ -13,50 +13,58 @@
 
     <!-- style css -->
     <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
 
     <!-- fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
 
   <body>
-    <form class="form" id="form1" onsubmit="sendRequest()">
+    <form class="form" onsubmit="sendRequest()">
       <h1 class="title">Profile Picker</h1>
       <div class="search">
         <textarea
           class="query_text"
-          id="convert_text"
           cols="65"
+          id="convert_text"
+          minlength="10"
           name="text"
           onkeydown="auto_grow(this);"
           placeholder="Fill Job Description"
           rows="1"
-          minlength="10"
           value=""
         ></textarea>
-        
-        
-        <!--        Loader -->
-        <div class="loader">
-          <span class="dots"></span>
-        </div>
-
-        <!--        Submit Button-->
-        <button class="btn submit-button" type="submit">Submit</button>
+        <svg
+          class="speech-button"
+          fill="none"
+          id="click_to_record"
+          role="button"
+          stroke="blue"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
       </div>
-      
+      <!--        Loader -->
+      <div class="loader">
+        <span class="dots"></span>
+      </div>
+
+      <!--        Submit Button-->
+      <button class="btn submit-button" type="submit">Submit</button>
     </form>
     <div class="output"></div>
 
-    <!-- <button style="padding:2%" id="click_to_record">Voice To Text</button> -->
-    <i id="click_to_record" class="fa-solid fa-microphone fa-4x mic"></i>
-
-    <img class="companyLogo" src="logo.png" alt="companyLogo" />
+    <img alt="companyLogo" class="companyLogo" src="logo.png" />
     <!-- Javascript files-->
     <script src="js/index.js"></script>
   </body>
